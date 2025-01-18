@@ -31,6 +31,9 @@
     @apply text-xl;
   }
   .btn {
+    @apply rounded-lg h-12 py-3 px-5;
+  }
+  .btn-accent {
     @apply bg-accent hover:bg-accent-hover text-white;
   }
   .input,
