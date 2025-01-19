@@ -35,4 +35,4 @@ const RotatingShape = ({ content, direction = "right", duration = 2 }) => {
 export default RotatingShape;
 
 
-// youtube 35:32
+

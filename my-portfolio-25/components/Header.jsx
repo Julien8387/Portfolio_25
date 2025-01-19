@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-//import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 //Components
 import Logo from "./Logo";

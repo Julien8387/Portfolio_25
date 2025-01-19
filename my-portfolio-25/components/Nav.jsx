@@ -12,7 +12,7 @@ const Links = [
 const Nav = ({ containerStyles, listStyles, linkStyles, spy }) => {
   return (
     <nav className={containerStyles}>
-      <ul className={linkStyles}>
+      <ul className={listStyles}>
         {Links.map((link, index) => {
           return (
             <ScollLink
