@@ -19,7 +19,7 @@ const Nav = ({ containerStyles, listStyles, linkStyles, spy }) => {
               spy={spy}
               key={index}
               activeClass="active"
-              to="link.name"
+              to={link.name}
               smooth
               className={linkStyles}
             >
