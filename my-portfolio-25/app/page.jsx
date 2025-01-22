@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import React, { useEffect } from "react";
-import Link from 'next/link';
+import Link from "next/link";
 
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
@@ -10,35 +10,29 @@ import Work from "@/components/Work";
 import Contact from "@/components/Contact";
 import FixedMenu from "@/components/FixedMenu";
 
-const Home = ()=>{
+const Home = () => {
   // implement locomotive scroll
-  useEffect(()=>{
-    const loadLocomotiveScroll= async () => {
-      const LocomotiveScroll=(await import("locomotive-scroll")).default;
+  useEffect(() => {
+    const loadLocomotiveScroll = async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
       new LocomotiveScroll();
-      
-      
-    }
+    };
     loadLocomotiveScroll();
-    },[]);
-  
-
-
+  }, []);
 
   return (
     <div data-scroll-container>
-      <Hero/>
-      
-      <Services/>
-      <About/>
-      <Journey/>
-      <Work/>
-      <Contact/>
-      <FixedMenu/>
+      <Hero />
+
+      <Services />
+      <About />
+      <Journey />
+      <Work />
+      <Contact />
+      <FixedMenu />
       {/*Tempory div */}
-      <div className ="h-[3000px]"></div>
-        </div>
-    );
-  }
-export default Home
-// youtube 59:30
+      <div className="h-[3000px]"></div>
+    </div>
+  );
+};
+export default Home;

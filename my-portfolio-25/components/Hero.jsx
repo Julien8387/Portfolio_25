@@ -1,19 +1,15 @@
 "use client";
 
 import { TypeAnimation } from "react-type-animation";
-
 import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
-//import Logo from "./Logo";
-
-
-//Components
 import RotatingShape from "./RotatingShape";
 import Header from "./Header";
+import Stats from "./Stats/Stats";
+
 const Hero = () => {
   return (
     <section className="h-[800px] sm:h-[600px] relative bg-accent/10 xl:bg-primary">
-      {/* HEADER */}
       <Header />
       <div className="container mx-auto h-full">
         <div className="relative z-20 h-full w-full xl:max-w-[768px] flex flex-col items-center xl:items-start justify-center text-center xl:text-left pt-10">
@@ -37,63 +33,85 @@ const Hero = () => {
           <ScrollLink to="contact" smooth>
             <button className="btn btn-accent mb-8">Contact me</button>
           </ScrollLink>
-          {/*Stats*/}
           <div>stats</div>
         </div>
-        {/*image*/}
-        <div className="hidden xl:flex w-[55vw] h-[800px] absolute top-0 right-0 bg-accent" >
+
+        {/* Image section */}
+        <div className="hidden xl:flex w-[55vw] h-[800px] absolute top-0 right-0 bg-accent">
+          {/* Main dev image */}
           <div className="absolute w-[558px] h-[642px] bottom-0 z-40 left-[6.5vw]">
             <Image
               src="/assets/hero/dev.png"
-              alt="Description de l'image"
+              alt="Developer illustration"
               fill
-              quality="100"
+              sizes="(max-width: 1280px) 100vw, 55vw"
+              quality={100}
               priority
               className="object-contain"
             />
           </div>
-          {/*arrow shape*/}
-          <div className="hidden xl:flex absolute top-48 left-[4vw]">
-            <Image src="/assets/hero/arrow.svg"
-            width={160}
-            height={160}
-            alt="Description alt"
+
+          {/* Arrow shape */}
+          <div className="hidden xl:flex absolute top-48 left-[4vw] w-[160px] h-[160px] relative">
+            <Image
+              src="/assets/hero/arrow.svg"
+              alt="Arrow decoration"
+              width={160}
+              height={160}
+              style={{ width: "auto", height: "auto" }}
             />
           </div>
-          {/*shape 1*/}
+
+          {/* Shape 1 */}
           <div className="absolute top-[240px] xl:left-[30vw]">
-            <RotatingShape content={<Image src="assets/hero/shape-1.svg"
-              width={38}
-              height={38}
-              alt="Description alt"
-              />
-            }
-            direction={"left"}
-            duration={6}
+            <RotatingShape
+              content={
+                <div className="relative w-[38px] h-[38px]">
+                  <Image
+                    src="/assets/hero/shape-1.svg"
+                    alt="Decorative shape 1"
+                    fill
+                    sizes="38px"
+                  />
+                </div>
+              }
+              direction="left"
+              duration={6}
             />
           </div>
-           {/*shape 2*/}
-           <div className="absolute top-[600px] left-[3vw]">
-            <RotatingShape content={<Image src="assets/hero/shape-2.svg"
-              width={34}
-              height={34}
-              alt="Description alt"
-              />
-            }
-            direction={"right"}
-            duration={5}
+
+          {/* Shape 2 */}
+          <div className="absolute top-[600px] left-[3vw]">
+            <RotatingShape
+              content={
+                <div className="relative w-[34px] h-[34px]">
+                  <Image
+                    src="/assets/hero/shape-2.svg"
+                    alt="Decorative shape 2"
+                    fill
+                    sizes="34px"
+                  />
+                </div>
+              }
+              direction="right"
+              duration={5}
             />
           </div>
-           {/*shape 3*/}
-           <div className="absolute top-[649px] xl:left-[40vw]">
-            <RotatingShape content={<Image src="assets/hero/shape-3.svg"
-              width={36}
-              height={36}
-              alt="Description alt"
-              />
-            }
-            direction={"left"}
-            duration={7}
+
+          {/* Shape 3 */}
+          <div className="absolute top-[649px] xl:left-[40vw]">
+            <RotatingShape
+              content={
+                <Image
+                  src="/assets/hero/shape-3.svg"
+                  alt="Decorative shape 3"
+                  width={36}
+                  height={36}
+                  style={{ width: "auto", height: "auto" }}
+                />
+              }
+              direction="left"
+              duration={7}
             />
           </div>
         </div>
@@ -103,5 +121,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-

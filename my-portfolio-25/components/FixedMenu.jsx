@@ -1,94 +1,86 @@
 "use client";
-import React, { useState, useEffect } from "react"; // Importation des hooks ici
+import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CgMenuGridR } from "react-icons/cg";
 import { useMediaQuery } from "react-responsive";
-import { FiMaPin, FiPhoneCall, FiMail } from "react-icons/fi";
-
-// components
+import { FiMapPin, FiPhoneCall, FiMail } from "react-icons/fi";
 import Nav from "./Nav";
 import Socials from "./Socials";
 
 const FixedMenu = () => {
-  const [showMenuButton, setShowMenuButton] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [isMounted, setIsMounted] = useState(false); // assure que le composant est monté
+  const [isMounted, setIsMounted] = useState(false);
 
   const isMobile = useMediaQuery({
     query: "(max-width: 640px)",
   });
 
-  // Vérifie si le composant est monté pour éviter des erreurs avec le rendu côté serveur
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (isMounted) {
-      const handleScroll = () => {
-        setShowMenuButton(window.scrollY > 150); // Afficher le bouton après un défilement de 150px
-      };
-      if (!isMobile) {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-      }
-      // Toujours afficher le bouton sur mobile
-      else {
-        setShowMenuButton(true);
-      }
-    }
-  }, [isMobile, isMounted]);
-
-  // Empêcher le rendu tant que le composant n'est pas monté
   if (!isMounted) return null;
 
   return (
-    <div className="fixed w-full h-[400px] z-50 flex justify-center pointer-events-none bg-transparent">
-      {/* MENU */}
-      <AnimatePresence>
-        { showMenu && showMenuButton && (
-                  <motion.div className="relative w-full max-w-md md:max-w-none h-[400px] bottom-28 xl:bottom-[21.2rm] px-4 pointer-events-auto ">
-                       Menu 
-                  </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* MENU Button */}
-      {/* Render button without animations on mobile */}
-      {isMobile ? (
-        <div className="fixed z-50 bottom-16">
-          <button
-            onClick={() => setShowMenu(!showMenu)}
-            className="bg-accent shadow-custom w-[54px] h-[54px] rounded-lg cursor-pointer flex justify-center items-center select-none"
-          >
-            <CgMenuGridR className="text-4xl text-white" />
-          </button>
-        </div>
-      ) : (
+    <>
+      <div className="fixed bottom-28 w-full z-50 flex justify-center">
         <AnimatePresence>
-          {showMenuButton && (
+          {showMenu && (
             <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 100, opacity: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 40,
-              }}
-              className="fixed z-50 bottom-16 pointer-events-auto"
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 100 }}
+              transition={{ duration: 0.3 }}
+              className="w-full max-w-[90%] md:max-w-[1170px] mx-auto"
             >
-              <button
-                onClick={() => setShowMenu(!showMenu)}
-                className="bg-accent shadow-custom w-[54px] h-[54px] rounded-lg cursor-pointer flex justify-center items-center select-none pointer-events-none "
-              >
-                <CgMenuGridR className="text-4xl text-white" />
-              </button>
+              <div className="bg-white shadow-custom rounded-lg p-6 md:p-12">
+                <div className="grid md:grid-cols-3 gap-8 items-center">
+                  {/* Navigation */}
+                  <Nav
+                    containerStyles="flex-1"
+                    listStyles="flex flex-col gap-y-6"
+                    linkStyles="hover:text-accent transition-all duration-300 cursor-pointer capitalize"
+                    spy={true}
+                  />
+
+                  {/* Contact Info */}
+                  <div className="flex flex-col gap-y-6">
+                    <div className="flex items-center gap-x-3">
+                      <FiMapPin className="text-accent" />
+                      <span>Nantes, France</span>
+                    </div>
+                    <div className="flex items-center gap-x-3">
+                      <FiPhoneCall className="text-accent" />
+                      <span>+33 6 38 29 19 28 </span>
+                    </div>
+                    <div className="flex items-center gap-x-3">
+                      <FiMail className="text-accent" />
+                      <span>julien.alt.dev@gmail.com</span>
+                    </div>
+                  </div>
+
+                  {/* Socials */}
+                  <Socials
+                    containerStyles="flex justify-center gap-x-4"
+                    iconStyles="text-2xl hover:text-accent transition-all duration-300"
+                  />
+                </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
-      )}
-    </div>
+      </div>
+
+      {/* Toggle Button */}
+      <motion.button
+        onClick={() => setShowMenu(!showMenu)}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="fixed z-[60] bottom-16 left-1/2 -translate-x-1/2 bg-accent hover:bg-accent-hover w-[54px] h-[54px] rounded-lg flex justify-center items-center shadow-custom transition-colors duration-300"
+      >
+        <CgMenuGridR className="text-4xl text-white" />
+      </motion.button>
+    </>
   );
 };
 
