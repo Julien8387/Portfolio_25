@@ -9,7 +9,10 @@ import Stats from "./Stats/Stats";
 
 const Hero = () => {
   return (
-    <section className="h-[800px] sm:h-[600px] relative bg-accent/10 xl:bg-primary">
+    <section
+      className="h-[800px] sm:h-[600px] relative bg-accent/10 xl:bg-white"
+      id="home"
+    >
       <Header />
       <div className="container mx-auto h-full">
         <div className="relative z-20 h-full w-full xl:max-w-[768px] flex flex-col items-center xl:items-start justify-center text-center xl:text-left pt-10">
@@ -27,13 +30,13 @@ const Hero = () => {
             />
           </h1>
           <p className="lead max-w-[476px] mb-7">
-            Deliverng powerful, custom websites that blend aesthetics with
+            Delivering powerful, custom websites that blend aesthetics with
             performance.
           </p>
           <ScrollLink to="contact" smooth>
             <button className="btn btn-accent mb-8">Contact me</button>
           </ScrollLink>
-          <div>stats</div>
+          <Stats />
         </div>
 
         {/* Image section */}
@@ -52,7 +55,11 @@ const Hero = () => {
           </div>
 
           {/* Arrow shape */}
-          <div className="hidden xl:flex absolute top-48 left-[4vw] w-[160px] h-[160px] relative">
+          <div
+            className="hidden xl:flex absolute top-48 left-[4vw] w-[160px] h-[160px] "
+            data-scroll
+            data-scroll-speed="0.05"
+          >
             <Image
               src="/assets/hero/arrow.svg"
               alt="Arrow decoration"
@@ -63,7 +70,11 @@ const Hero = () => {
           </div>
 
           {/* Shape 1 */}
-          <div className="absolute top-[240px] xl:left-[30vw]">
+          <div
+            className="absolute top-[600px] xl:left-[3vw]"
+            data-scroll
+            data-scroll-speed="0.02"
+          >
             <RotatingShape
               content={
                 <div className="relative w-[38px] h-[38px]">
@@ -81,7 +92,11 @@ const Hero = () => {
           </div>
 
           {/* Shape 2 */}
-          <div className="absolute top-[600px] left-[3vw]">
+          <div
+            className="absolute top-[140px] left-[50vw]"
+            data-scroll
+            data-scroll-speed="0.05"
+          >
             <RotatingShape
               content={
                 <div className="relative w-[34px] h-[34px]">
@@ -99,7 +114,11 @@ const Hero = () => {
           </div>
 
           {/* Shape 3 */}
-          <div className="absolute top-[649px] xl:left-[40vw]">
+          <div
+            className="absolute top-[380px] xl:left-[40vw]"
+            data-scroll
+            data-scroll-speed="0.05"
+          >
             <RotatingShape
               content={
                 <Image
