@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @layer utilities {
+  .tracking-custom {
+    letter-spacing: -0.02em;
+  }
+} */
 
 @layer base {
   body {
@@ -22,7 +27,7 @@
   }
 
   .h2 {
-    @apply text-[36px] trackingt-[-0.02em] leading-[44px] font-semibold;
+    @apply text-[36px] tracking-[-0.02em] leading-[44px] font-semibold;
   }
 
   .h3 {
@@ -43,12 +48,16 @@
     focus:borrder-accent rounded-lg placeholder:text-[#667085];
   }
   .input {
-    @apply h-12 px[14px];
+    @apply h-12 px-[14px];
   }
   .textarea {
     @apply resize-none p-[14px];
   }
   .active {
     @apply text-accent transition-all duration-200;
+  }
+  :root {
+
+    --radius: 0.5rem
   }
 }

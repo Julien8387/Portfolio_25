@@ -9,29 +9,32 @@ const letterAnimation = {
   animate: (i) => ({
     y: 0,
     opacity: 1,
-    trasition: { duration: 0.3, ease: [0.2, 0, 0.1, 1], delay: i[0] },
+    transition: { duration: 0.3, ease: [0.2, 0, 0.1, 1], delay: i[0] },
   }),
 };
 
-const getLetter = (name) => {
-  if (!name || typeof name !== "string") return [];
-  name.split("").map(letter, (index) => {
-    return letters.push(
+const getLetter = (text) => {
+  if (!text || typeof text !== "string") return [];
+  const letters = [];
+
+  text.split("").forEach((letter, index) => {
+    letters.push(
       <motion.span
         variants={letterAnimation}
         initial="initial"
         whileInView="animate"
-        custom={[index * 0.02, (name.lenght - index) * 0.01]}
+        custom={[index * 0.02, (text.length - index) * 0.01]}
         key={index}
       >
         {letter}
       </motion.span>
     );
   });
+
   return letters;
 };
 
-const AnimatedText = (text, textStyles) => {
+const AnimatedText = ({ text, textStyles }) => {
   return <div className={`${textStyles}`}>{getLetter(text)}</div>;
 };
 
