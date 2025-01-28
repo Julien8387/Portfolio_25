@@ -9,7 +9,8 @@ import Journey from "@/components/Journey";
 import Work from "@/components/Work/Work";
 import Contact from "@/components/Contact";
 import FixedMenu from "@/components/FixedMenu";
-
+import Testimonial from "@/components/Testimonial/Testimonial";
+import Footer from "@/components/Footer";
 const Home = () => {
   // implement locomotive scroll
   useEffect(() => {
@@ -23,15 +24,17 @@ const Home = () => {
   return (
     <div data-scroll-container>
       <Hero />
+      <FixedMenu />
 
       <Services />
       <About />
       <Journey />
       <Work />
+      <Testimonial />
       <Contact />
-      <FixedMenu />
-      {/*Tempory div */}
-      <div className="h-[3000px]"></div>
+      <Footer />
+      {/* Tempory div
+      <div className="h-[3000px]"></div> */}
     </div>
   );
 };

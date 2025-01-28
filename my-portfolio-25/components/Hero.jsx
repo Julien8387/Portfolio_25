@@ -44,10 +44,10 @@ const Hero = () => {
           {/* Main dev image */}
           <div className="absolute w-[558px] h-[642px] bottom-0 z-40 left-[6.5vw]">
             <Image
-              src="/assets/hero/dev.png"
+              src="/assets/hero/dev2.png"
               alt="Developer illustration"
               fill
-              sizes="(max-width: 1280px) 100vw, 55vw"
+              sizes="(max-width: 1580px) 100vw, 55vw"
               quality={100}
               priority
               className="object-contain"
