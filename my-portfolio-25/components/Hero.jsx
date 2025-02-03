@@ -16,25 +16,28 @@ const Hero = () => {
       <Header />
       <div className="container mx-auto h-full">
         <div className="relative z-20 h-full w-full xl:max-w-[768px] flex flex-col items-center xl:items-start justify-center text-center xl:text-left pt-10">
-          <h1 className="h1 mb-2 max-w-[320px] xl:max-w-none">
-            <span className="text-accent"> I Build And </span> Design Powerful
+          <h1 className="h2 mb-2 max-w-[320px] xl:max-w-none">
             <TypeAnimation
               preRenderFirstString={true}
-              sequence={["Websites", 2000, "Apps", 2000]}
+              sequence={["Bonjour,", 4000, "Hello,", 4000]}
               speed={50}
               repeat={Infinity}
               wrapper="span"
               cursor={false}
-              className="ml-2 xl:ml-4"
+              className=""
               aria-label="Animated text showing Websites and Apps"
             />
+            <span className="text-accent">
+              <br /> Bienvenue
+            </span>
+            <br /> sur mon portfolio
           </h1>
           <p className="lead max-w-[476px] mb-7">
-            Delivering powerful, custom websites that blend aesthetics with
-            performance.
+            Actuellement en recherche d'une alternance en vue du passage de mon
+            titre RNCP concepteur d'applications (code de la fiche: RNCP37873)
           </p>
           <ScrollLink to="contact" smooth>
-            <button className="btn btn-accent mb-8">Contact me</button>
+            <button className="btn btn-accent mb-8">Contact</button>
           </ScrollLink>
           <Stats />
         </div>
@@ -42,19 +45,20 @@ const Hero = () => {
         {/* Image section */}
         <div className="hidden xl:flex w-[55vw] h-[800px] absolute top-0 right-0 bg-accent">
           {/* Main dev image */}
-          <div className="absolute w-[558px] h-[642px] bottom-0 z-40 left-[6.5vw]">
+          <div className="absolute w-[900px] h-[900px] bottom-0 z-40 left-[6.5vw]">
+            {/*  */}
             <Image
               src="/assets/hero/dev2.png"
-              alt="Developer illustration"
+              alt="Photo de Julien"
               fill
-              sizes="(max-width: 1580px) 100vw, 55vw"
+              sizes="(max-width: 15800px) 100vw, 55vw"
               quality={100}
               priority
               className="object-contain"
             />
           </div>
 
-          {/* Arrow shape */}
+          {/* Arrow shape*/}
           <div
             className="hidden xl:flex absolute top-48 left-[4vw] w-[160px] h-[160px] "
             data-scroll

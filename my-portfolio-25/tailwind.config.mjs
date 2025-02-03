@@ -23,11 +23,11 @@ export default {
 		},
 		extend: {
 			colors: {
-				primary: '#10151f',
-				secondary: '#475467',
+				primary: '#3B403AFF',
+				secondary: '#000000FF',
 				accent: {
-					DEFAULT: '#7edad2',
-					hover: '#79d3cc'
+					DEFAULT: '#4E614FFF',
+					hover: '#4E614FFF'
 				}
 			},
 			boxShadow: {

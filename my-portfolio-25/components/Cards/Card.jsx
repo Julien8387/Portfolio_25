@@ -39,12 +39,12 @@ const Card = ({
           <div className="flex-1 flex items-center justify-center xl:justify-start md:py-8 md:px-16">
             <div className="flex flex-col xl:flex-row items-center xl:items-start gap-4 text-center xl:text-left xl:gap-10 px-4 xl:px-0">
               {type === "skill" ? (
-                //render icon for skills
+                //afficher l'icône pour les compétences
                 <div className="w-max xl:w-[300px] h-full relative flex items-center justify-center">
                   <div className=" text-5xl text-primary/90">{icon}</div>
                 </div>
               ) : (
-                // render the logo for experience & education
+                // afficher le logo pour l'expérience et formation
                 <div className="relative w-[300px] h-[38px] xl:h-[44px]">
                   <Image
                     src={logoUrl}
@@ -75,5 +75,3 @@ const Card = ({
 };
 
 export default Card;
-
-// YOUTUBE 2-30.45

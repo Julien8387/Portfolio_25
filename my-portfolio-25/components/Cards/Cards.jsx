@@ -3,19 +3,11 @@ import React from "react";
 import Card from "./Card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaJava,
-  FaAngular,
-} from "react-icons/fa";
+import { FaHtml5, FaJs, FaReact, FaJava, FaAngular } from "react-icons/fa";
 import { Type } from "lucide-react";
 
 const journey = [
-  //experience
+  //experiences
   {
     type: "experience",
     company: "Odea Labs",
@@ -52,7 +44,7 @@ const journey = [
     description:
       "Built websites and web apps using Next.js, Tailwind CSS and Javascript. Worked on scalable, user-friendly solutions.",
   },
-  //Education
+  //Formations
   {
     type: "education",
     institution: "Odea Labs",
@@ -81,7 +73,7 @@ const journey = [
     description:
       "Built websites and web apps using Next.js, Tailwind CSS and Javascript. Worked on scalable, user-friendly solutions.",
   },
-  //Skills
+  //Compétences
   {
     type: "skill",
     name: "HTML",
@@ -125,9 +117,9 @@ const Cards = () => {
         className="w-full flex flex-col items-center"
       >
         <TabsList className="max-w-max mb-[30px]">
-          <TabsTrigger value="experience">Experience</TabsTrigger>
-          <TabsTrigger value="education">Education</TabsTrigger>
-          <TabsTrigger value="skills">My Skills</TabsTrigger>
+          <TabsTrigger value="experience">Experiences</TabsTrigger>
+          <TabsTrigger value="education">Formations</TabsTrigger>
+          <TabsTrigger value="skills">Compétences</TabsTrigger>
         </TabsList>
         <TabsContent value="experience" className="w-full">
           <AnimatePresence>

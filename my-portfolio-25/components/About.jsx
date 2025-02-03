@@ -14,9 +14,9 @@ const About = () => {
               {/*Shape */}
               <div className="w-[160px] h-[160px] bg-accent absolute -left-5 -top-5 -z-10"></div>
               {/*Image */}
-              <div className="rounded-tl-[8px] rounded-tr-[120px] w-full bg-[#e5f8f6] min-h-[480px] flex items-end justify-center">
+              <div className="rounded-tl-[8px] rounded-tr-[120px] w-full bg-[#85A593FF] min-h-[480px] flex items-end justify-center">
                 <Image
-                  src="/assets/about/img.png"
+                  src="/assets/hero/dev2.png"
                   width={350}
                   height={478}
                   quality={100}
