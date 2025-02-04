@@ -64,7 +64,7 @@ const Testimonial = () => {
     <div className="py-24 overflow-hidden">
       <div className="container mx-auto">
         <AnimatedText
-          text="What clients say"
+          text="**Carrousel test**"
           textStyles="h2 mb-[30px] xl:mb-[60px] text-center"
         />
         <div className="flex flex-col lg:flex-row gap-12">

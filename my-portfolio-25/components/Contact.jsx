@@ -60,7 +60,7 @@ const Contact = () => {
         <div className="flex flex-col items-center xl:flex-row gap-16">
           <div className="flex-1 mx-auto xl:mx-0 flex flex-col">
             <AnimatedText
-              text="Let's work together"
+              text="Envie d'en savoir plus, laisse moi un message !"
               textStyles="h2 mb-12 text-center xl:text-left"
             />
             {/**form */}

@@ -6,6 +6,7 @@ import Image from "next/image";
 import RotatingShape from "./RotatingShape";
 import Header from "./Header";
 import Stats from "./Stats/Stats";
+import CV from "./CV";
 
 const Hero = () => {
   return (
@@ -40,6 +41,7 @@ const Hero = () => {
             <button className="btn btn-accent mb-8">Contact</button>
           </ScrollLink>
           <Stats />
+          <CV />
         </div>
 
         {/* Image section */}

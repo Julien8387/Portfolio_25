@@ -63,14 +63,16 @@ const About = () => {
               <div className="mb-4">
                 <AnimatedText text="My name is Julien" textStyles="h2 mb-2" />
                 <p className="text-lg text-secondary">
-                  Front Developer & Designer
+                  Apprenant Dev Full-Stack
                 </p>
               </div>
               <p className="text-secondary max-w-[680px] mx-auto xl:mx-0 mb-2">
-                I create visually stunning and functional websites using modern
-                technologies and design principles. Explore my work to see how I
-                combine creativity with technical skill to deliver exceptional
-                experiences.
+                Après 9 mois de formation au sein d'Ada tech school, ou j'ai pu
+                explorer plusieurs langages et framework.
+                <br /> Un jour, un encadrant a suggéré un atelier de
+                cybersécurité sur la plateforme Root-me, et cela a généré pour
+                moi un réel intérêt pour ce domaine, m'encourageant ainsi à axer
+                ma recherche d'alternance dans cette direction.
               </p>
               {/** Info items */}
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-12">
@@ -84,14 +86,14 @@ const About = () => {
                 {/** Item 2 */}
                 <div className="text-center lg:text-left">
                   <div className="uppercase font-bold text-primary mb-2">
-                    Born in
+                    Né à
                   </div>
                   <div>La Seyne s/Mer, 83500 Var, France</div>
                 </div>
                 {/** Item 3 - Phone La classe whitespace-nowrap empêchera le numéro de téléphone de se couper sur plusieurs lignes*/}
                 <div className="text-center lg:text-left">
                   <div className="uppercase font-bold text-primary mb-2">
-                    Phone
+                    Téléphone
                   </div>
                   <div className="whitespace-nowrap">+33 6 38 29 19 28</div>
                 </div>

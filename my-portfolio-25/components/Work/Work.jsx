@@ -85,7 +85,7 @@ const Work = () => {
         <Tabs defaultValue="all" className="w-full flex flex-col">
           <div className="flex flex-col xl:flex-row items-center xl:items-start xl:justify-between mb-[30px]">
             <AnimatedText
-              text="My latest work"
+              text="**Composant test projet card**"
               textStyles={"h2 mb-[30px] xl:mb-0"}
             />
             {/** render tab triggers */}
@@ -124,7 +124,7 @@ const Work = () => {
             {visibleItems < filterWork.length && (
               <div className="flex justify-center mt-12">
                 <button onClick={loadMoreItems} className="btn btn-accent">
-                  Load more
+                  Charger plus
                 </button>
               </div>
             )}

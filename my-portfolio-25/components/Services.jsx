@@ -17,11 +17,11 @@ const services = [
     title: "E-commerce Soutions",
     description: "Building secure, user friendly online stores to drive sales.",
   },
-  // {
-  //   icon: "assets/services/icon-4.svg",
-  //   title: "Care & Support",
-  //   description: "Providing updates, security and suport for performance.",
-  // },
+  {
+    // icon: "assets/services/icon-4.svg",
+    title: "Care & Support",
+    description: "Providing updates, security and suport for performance.",
+  },
 ];
 
 const Services = () => {

@@ -6,7 +6,7 @@ const Journey = () => {
     <section id="journey">
       <div>
         <AnimatedText
-          text="My professional journey"
+          text="**Composant test 1**"
           textStyles="h2 mb-[38px] text-center"
         />
         <Cards />

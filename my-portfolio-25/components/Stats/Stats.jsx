@@ -3,19 +3,19 @@ import StatsItem from "./StatsItem";
 
 const statsData = [
   {
-    endCountNum: 10,
-    endCountText: "+",
-    text: "Ans d'expérience",
+    endCountNum: 9,
+    endCountText: "",
+    text: "Mois de foramtion",
+  },
+  {
+    endCountNum: 8,
+    endCountText: "",
+    text: "Projets collectifs",
   },
   {
     endCountNum: 100,
-    endCountText: "+",
-    text: "Sites créés",
-  },
-  {
-    endCountNum: 95,
     endCountText: "%",
-    text: "Clients satisfaits",
+    text: "Positif",
   },
 ];
 
