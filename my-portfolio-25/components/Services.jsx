@@ -4,23 +4,24 @@ import Image from "next/image";
 const services = [
   {
     // icon: "assets/services/icon-1.svg",
-    title: "UI UX Design",
-    description: "Designing compelling engaging user experences.",
+    title: "Front",
+    description: "",
   },
   {
     // icon: "assets/services/icon-2.svg",
-    title: "Web developpement",
-    description: "Deveoping robust, scalable websites for all devices.",
+    title: "Back",
+    description: "",
   },
   {
     // icon: "assets/services/icon-3.svg",
-    title: "E-commerce Soutions",
-    description: "Building secure, user friendly online stores to drive sales.",
+    title: "Bases de donées",
+    description:
+      "Création d'une BDD sur la powerplatform et de sa schématisation",
   },
   {
     // icon: "assets/services/icon-4.svg",
-    title: "Care & Support",
-    description: "Providing updates, security and suport for performance.",
+    title: "Cybersécurité",
+    description: "Formation Google Career Certificates France en cours",
   },
 ];
 
