@@ -24,7 +24,7 @@ const About = () => {
                   alt="Profile picture"
                 />
               </div>
-              {/* Rotating shape*/}
+              {/* Rotating shape
               <div className="absolute top-2/4 -right-[65px]">
                 <motion.div
                   initial={{ rotate: 0 }}
@@ -35,7 +35,9 @@ const About = () => {
                     repeat: Infinity,
                     repeatType: "loop",
                   }}
-                  style={{ transformOrigin: "center center" }}
+                  style={{
+                    transformOrigin: "center center",
+                  }}
                 >
                   <Image
                     src="/assets/about/shape-1.svg"
@@ -44,7 +46,7 @@ const About = () => {
                     alt="Decorative rotating shape"
                   />
                 </motion.div>
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none ">
                   <div className="text-primary z-10">
                     <div className="text-5xl font-bold leading-none">10+</div>
                     <div className="leading-none">
@@ -52,7 +54,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           {/** text */}

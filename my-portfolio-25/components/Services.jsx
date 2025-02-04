@@ -3,17 +3,17 @@ import Image from "next/image";
 
 const services = [
   {
-    icon: "assets/services/icon-1.svg",
+    // icon: "assets/services/icon-1.svg",
     title: "UI UX Design",
     description: "Designing compelling engaging user experences.",
   },
   {
-    icon: "assets/services/icon-2.svg",
+    // icon: "assets/services/icon-2.svg",
     title: "Web developpement",
     description: "Deveoping robust, scalable websites for all devices.",
   },
   {
-    icon: "assets/services/icon-3.svg",
+    // icon: "assets/services/icon-3.svg",
     title: "E-commerce Soutions",
     description: "Building secure, user friendly online stores to drive sales.",
   },
@@ -33,15 +33,15 @@ const Services = () => {
             return (
               <li
                 key={index}
-                className="bg-white shadow-custom p-6 max-w-[350px] md:max-w-none rounded-lg"
+                className="bg-[#85A593FF] shadow-custom p-6 max-w-[350px] md:max-w-none rounded-lg"
               >
-                <Image
+                {/* <Image
                   src={services.icon}
                   width={48}
                   height={48}
                   alt=""
                   className="mb-4"
-                />
+                /> */}
                 <h3 className="text-[20px] text-primary font-semibold mb-3">
                   {services.title}
                 </h3>

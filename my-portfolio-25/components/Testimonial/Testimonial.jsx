@@ -4,9 +4,9 @@ import { ImQuotesLeft } from "react-icons/im";
 
 //import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
-//import swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 //iport required modules
 import { Autoplay } from "swiper/modules";
