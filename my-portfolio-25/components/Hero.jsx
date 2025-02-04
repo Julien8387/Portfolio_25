@@ -45,7 +45,7 @@ const Hero = () => {
         {/* Image section */}
         <div className="hidden xl:flex w-[55vw] h-[800px] absolute top-0 right-0 bg-accent">
           {/* Main dev image */}
-          <div className="absolute w-[900px] h-[900px] bottom-0 z-40 left-[6.5vw]">
+          <div className="absolute w-[700px] h-[700px] bottom-0 z-40 right-10">
             {/*  */}
             <Image
               src="/assets/hero/dev2.png"
