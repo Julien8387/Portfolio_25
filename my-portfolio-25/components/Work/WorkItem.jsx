@@ -8,7 +8,7 @@ import Link from "next/link";
 const WorkItem = ({ href, category, img, title }) => {
   return (
     <Link href="/" className="group">
-      <div className="w-full h-[300px] p-8 rounded-[30px] flex items-center justify-center mb-6 relative overflow-hidden bg-[#f4f4f4]">
+      <div className="w-full h-[300px] p-8 rounded-[30px] flex items-center justify-center mb-6 relative overflow-hidden bg-[#4E614FFF]">
         <Badge className="bg-primary text-base z-40 absolute top-6 left-6 capitalize">
           {category}
         </Badge>

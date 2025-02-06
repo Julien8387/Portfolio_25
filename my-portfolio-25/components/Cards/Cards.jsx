@@ -3,109 +3,110 @@ import React from "react";
 import Card from "./Card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaHtml5, FaJs, FaReact, FaJava, FaAngular } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaJs,
+  FaReact,
+  FaJava,
+  FaAngular,
+  FaGoogle,
+} from "react-icons/fa";
 import { Type } from "lucide-react";
 
 const journey = [
   //experiences
   {
     type: "experience",
-    company: "Odea Labs",
-    logoUrl: "/assets/journey/experience/logo-1.svg",
-    position: "Web Developer",
-    duration: "Jul 2021 - Present",
-    description:
-      "Built websites and web apps using Next.js, Tailwind CSS and Javascript. Worked on scalable, user-friendly solutions.",
+    company: "***titre***",
+
+    position: "***poste***",
+    duration: "***Date***",
+    description: "***description***",
   },
   {
     type: "experience",
-    company: "Odea Labs",
-    logoUrl: "/assets/journey/experience/logo-1.svg",
-    position: "Web Developer",
-    duration: "Jul 2021 - Present",
-    description:
-      "Built websites and web apps using Next.js, Tailwind CSS and Javascript. Worked on scalable, user-friendly solutions.",
+    company: "***titre***",
+
+    position: "***poste***",
+    duration: "***Date***",
+    description: "***description***",
   },
   {
     type: "experience",
-    company: "Odea Labs",
-    logoUrl: "/assets/journey/experience/logo-1.svg",
-    position: "Web Developer",
-    duration: "Jul 2021 - Present",
-    description:
-      "Built websites and web apps using Next.js, Tailwind CSS and Javascript. Worked on scalable, user-friendly solutions.",
+    company: "***titre***",
+
+    position: "***poste***",
+    duration: "***Date***",
+    description: "***Description***",
   },
   {
     type: "experience",
-    company: "Odea Labs",
-    logoUrl: "/assets/journey/experience/logo-1.svg",
-    position: "Web Developer",
-    duration: "Jul 2021 - Present",
-    description:
-      "Built websites and web apps using Next.js, Tailwind CSS and Javascript. Worked on scalable, user-friendly solutions.",
+    company: "***titre***",
+
+    position: "***poste***",
+    duration: "***Date***",
+    description: "***description",
   },
   //Formations
   {
     type: "education",
-    institution: "Odea Labs",
-    logoUrl: "/assets/journey/education/logo-1.svg",
+    institution: "***titre***",
     position: "Web Developer",
-    qualification: "Jul 2021 - Present",
+    qualification: "***Date***",
     description: "Lerning by doing",
   },
   {
     type: "experience",
-    institution: "Odea Labs",
-    logoUrl: "/assets/journey/education/logo-2.svg",
+    institution: "***titre***",
     qualification: "Jul 2021 - Present",
 
-    duration: "Jul 2021 - Present",
-    description:
-      "Built websites and web apps using Next.js, Tailwind CSS and Javascript. Worked on scalable, user-friendly solutions.",
+    duration: "***Date",
+    description: "***description***",
   },
   {
     type: "experience",
-    institution: "Odea Labs",
-    logoUrl: "/assets/journey/education/institution.svg",
+    institution: "***titre***",
     qualification: "Jul 2021 - Present",
 
-    duration: "Jul 2021 - Present",
-    description:
-      "Built websites and web apps using Next.js, Tailwind CSS and Javascript. Worked on scalable, user-friendly solutions.",
+    duration: "***Date***",
+    description: "***description***",
   },
   //Compétences
+  {
+    type: "skill",
+    name: "React",
+    icon: <FaGoogle />,
+    duration: "***Date***",
+    description: "***description***",
+  },
   {
     type: "skill",
     name: "HTML",
     icon: <FaHtml5 />,
 
-    duration: "Learned in 2023",
-    description:
-      "Crafted structured web content using HTML effectively for modern websites, ensuring semanting marckup and accessibility.",
+    duration: "***Date***",
+    description: "***description***",
   },
   {
     type: "skill",
     name: "Angular",
     icon: <FaAngular />,
-    duration: "Jul 2021 - Present",
-    description:
-      "Built websites and web apps using Next.js, Tailwind CSS and Javascript. Worked on scalable, user-friendly solutions.",
+    duration: "***Date***",
+    description: "***description***",
   },
   {
     type: "skill",
     name: "Java",
     icon: <FaJava />,
-    duration: "Jul 2021 - Present",
-    description:
-      "Built websites and web apps using Next.js, Tailwind CSS and Javascript. Worked on scalable, user-friendly solutions.",
+    duration: "***Date***",
+    description: "***description***",
   },
   {
     type: "skill",
     name: "React",
     icon: <FaReact />,
-    duration: "Learned in 2023",
-    description:
-      "Crafted structured web content using HTML effectively for modern websites, ensuring semanting marckup and accessibility.",
+    duration: "***Date***",
+    description: "***description***",
   },
 ];
 
@@ -117,7 +118,7 @@ const Cards = () => {
         className="w-full flex flex-col items-center"
       >
         <TabsList className="max-w-max mb-[30px]">
-          <TabsTrigger value="experience">Experiences</TabsTrigger>
+          <TabsTrigger value="experience">Expériences</TabsTrigger>
           <TabsTrigger value="education">Formations</TabsTrigger>
           <TabsTrigger value="skills">Compétences</TabsTrigger>
         </TabsList>

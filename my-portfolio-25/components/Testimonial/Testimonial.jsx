@@ -17,34 +17,34 @@ import Image from "next/image";
 
 const slides = [
   {
-    img: "/assets/testimonial/img-1.png",
-    name: "Emma Johnson",
-    message: "The service was fantastic ! Highly recommend it.",
+    img: "/assets/testimonial/img-1.jpg",
+    name: "***name***",
+    message: "**message**",
   },
   {
-    img: "/assets/testimonial/img-2.png",
-    name: "Sophia Grant",
-    message: "Vraiment bien, service rapide.",
+    img: "/assets/testimonial/img-2.jpg",
+    name: "***name***",
+    message: "**message**",
   },
   {
-    img: "/assets/testimonial/img-3.png",
-    name: "Mary Poppins",
-    message: "Excellent work ! ",
+    img: "/assets/testimonial/img-3.jpg",
+    name: "***name***",
+    message: "**message**",
   },
   {
-    img: "/assets/testimonial/img-4.png",
-    name: "Marge Simpson",
-    message: "Bon design, rendu dans les temps.",
+    img: "/assets/testimonial/img-4.jpg",
+    name: "***name***",
+    message: "**message**",
   },
   {
-    img: "/assets/testimonial/img-5.png",
-    name: "Isabelle Martin",
-    message: "Site user friedly. Bravo.",
+    img: "/assets/testimonial/img-5.jpg",
+    name: "***name***",
+    message: "**message**",
   },
   {
-    img: "/assets/testimonial/img-6.png",
-    name: "Jenna Davis",
-    message: "Site performant.",
+    img: "/assets/testimonial/img-6.jpg",
+    name: "***name***",
+    message: "**message**",
   },
 ];
 

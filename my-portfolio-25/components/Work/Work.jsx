@@ -10,44 +10,44 @@ const data = [
   {
     href: "",
     category: "design",
-    img: "/assets/work/thumb-1.png",
-    title: "Luminex UI Kit",
+    img: "/assets/work/thumb-1.jpg",
+    title: "**Name**",
   },
   {
     href: "",
     category: "design",
-    img: "/assets/work/thumb-2.png",
-    title: "Nebula Dashboard",
+    img: "/assets/work/thumb-2.jpg",
+    title: "**Name**",
   },
   {
     href: "",
     category: "frontend",
-    img: "/assets/work/thumb-3.png",
-    title: "Velox App",
+    img: "/assets/work/thumb-3.jpg",
+    title: "**Name**",
   },
   {
     href: "",
     category: "frontend",
-    img: "/assets/work/thumb-4.png",
-    title: "Quantum Portfolio",
+    img: "/assets/work/thumb-4.jpg",
+    title: "**Name**",
   },
   {
     href: "",
     category: "frontend",
-    img: "/assets/work/thumb-5.png",
-    title: "Synergy app UI",
+    img: "/assets/work/thumb-5.jpg",
+    title: "**Name**",
   },
   {
     href: "",
     category: "fullstack",
-    img: "/assets/work/thumb-6.png",
-    title: "Appollo Trave",
+    img: "/assets/work/thumb-6.jpg",
+    title: "**Name**",
   },
   {
     href: "",
     category: "fullstack",
-    img: "/assets/work/thumb-7.png",
-    title: "Horizon SaaS",
+    img: "/assets/work/thumb-7.jpg",
+    title: "**Name**",
   },
 ];
 
@@ -80,7 +80,7 @@ const Work = () => {
     setVisibleItems((prev) => prev + 2);
   };
   return (
-    <section className="pt-24 min-h-[1000px]" id="work">
+    <section className="pt-24 min-h-[1000px]" id="work bg-[#4E614FFF]">
       <div className="container mx-auto">
         <Tabs defaultValue="all" className="w-full flex flex-col">
           <div className="flex flex-col xl:flex-row items-center xl:items-start xl:justify-between mb-[30px]">
