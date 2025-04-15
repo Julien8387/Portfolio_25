@@ -216,7 +216,7 @@ const Contact = () => {
           {/**Image Background*/}
           <div className="hidden xl:flex relative w-[577px] h-[664px] rounded-lg overflow-hidden">
             <Image
-              src="/assets/contact/img.png"
+              src="/assets/contact/img.jpg"
               className="object-cover"
               fill
               quality={100}

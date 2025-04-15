@@ -67,12 +67,9 @@ const About = () => {
                 </p>
               </div>
               <p className="text-secondary max-w-[680px] mx-auto xl:mx-0 mb-2">
-                Après 9 mois de formation au sein d'Ada tech school, ou j'ai pu
-                explorer plusieurs langages et framework.
-                <br /> Un jour, un encadrant a suggéré un atelier de
-                cybersécurité sur la plateforme Root-me, et cela a généré pour
-                moi un réel intérêt pour ce domaine, m'encourageant ainsi à axer
-                ma recherche d'alternance dans cette direction.
+                Après 9 mois de formation au sein d'Ada tech school. <br /> Je suis aujourd'hui en recherche d'une alternance pour une durée minimun de 12 mois.
+                 J'ai pu explorer plusieurs langages et framework lors des projets collectifs durant la formation.
+                
               </p>
               {/** Info items */}
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-12">
