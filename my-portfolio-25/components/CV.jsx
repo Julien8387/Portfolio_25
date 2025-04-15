@@ -4,7 +4,7 @@ import { FiDownload } from "react-icons/fi";
 const DownloadButton = ({}) => {
   return (
     <a
-      href="/CV_23_01_25.pdf"
+      href="/CV_04_25.pdf"
       download
       className="
           flex items-center gap-2 

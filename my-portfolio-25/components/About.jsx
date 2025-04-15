@@ -67,7 +67,8 @@ const About = () => {
                 </p>
               </div>
               <p className="text-secondary max-w-[680px] mx-auto xl:mx-0 mb-2">
-                Après 9 mois de formation au sein d'Ada tech school. <br /> Je suis aujourd'hui en recherche d'une alternance pour une durée minimun de 12 mois.
+                Après 9 mois de formation au sein d'Ada tech school. <br />
+                 Je suis actuellement en recherche d'alternance pour une durée minimun de 12 mois.<br />
                  J'ai pu explorer plusieurs langages et framework lors des projets collectifs durant la formation.
                 
               </p>
