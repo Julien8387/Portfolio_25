@@ -5,12 +5,12 @@ const services = [
   {
     // icon: "assets/services/icon-1.svg",
     title: "Front",
-    description: "",
+    description: "Ce portofolio avec ces composants test et d'autres projets collectifs.",
   },
   {
     // icon: "assets/services/icon-2.svg",
     title: "Back",
-    description: "",
+    description: "Lors des projets de groupe création de la base de données et du schéma MCD.  ",
   },
   {
     // icon: "assets/services/icon-3.svg",
@@ -20,8 +20,8 @@ const services = [
   },
   {
     // icon: "assets/services/icon-4.svg",
-    title: "Cybersécurité",
-    description: "Formation Google Career Certificates France en cours",
+    title: "Salesforce",
+    description: "Formation sur Trailhead parcours Administrateur débutant en cours",
   },
 ];
 

@@ -34,8 +34,8 @@ const Hero = () => {
             <br /> sur mon portfolio
           </h1>
           <p className="lead max-w-[476px] mb-7">
-            Actuellement en recherche d'une alternance en vue du passage de mon
-            titre RNCP concepteur d'applications (code de la fiche: RNCP37873)
+           Moi c'est Julien et dans le cadre de ma reconversion pro, je recherche une entreprise pour concrétiser cette super aventure.<br />
+           Ps: J'aime les fleurs.
           </p>
           <ScrollLink to="contact" smooth>
             <button className="btn btn-accent mb-8">Contact</button>
