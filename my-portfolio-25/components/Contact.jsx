@@ -232,12 +232,12 @@
 // export default Contact;
 
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import AnimatedText from "./AnimatedText";
 import Image from "next/image";
 import { FaCheckCircle } from "react-icons/fa";
-// import ReCAPTCHA from "react-google-recaptcha"; // Décommente si tu veux activer reCAPTCHA
+import { load } from "@fingerprintjs/botd"; // <-- Ajout ici
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mkgornvw");
@@ -251,9 +251,15 @@ const Contact = () => {
   });
 
   const [showIcon, setShowIcon] = useState(false);
+  const [botError, setBotError] = useState(""); // Pour afficher une erreur si bot détecté
 
-  // Pour reCAPTCHA (optionnel)
-  // const [recaptchaToken, setRecaptchaToken] = useState("");
+  // On charge BotD une seule fois
+  const botdRef = useRef(null);
+  useEffect(() => {
+    load().then((botd) => {
+      botdRef.current = botd;
+    });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -275,20 +281,20 @@ const Contact = () => {
     }
   }, [state.succeeded]);
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
+    setBotError(""); // Réinitialise l’erreur
 
-    // Pour reCAPTCHA (optionnel)
-    // if (!recaptchaToken) {
-    //   alert("Veuillez valider le reCAPTCHA !");
-    //   return;
-    // }
-    // const form = e.target;
-    // const data = new FormData(form);
-    // data.append("g-recaptcha-response", recaptchaToken);
-    // handleSubmit(data);
+    // Détection du bot avant l’envoi
+    if (botdRef.current) {
+      const result = await botdRef.current.detect();
+      if (result.bot.result === "bad") {
+        setBotError("Détection d'activité suspecte : l'envoi est bloqué.");
+        return;
+      }
+    }
 
-    handleSubmit(e); // Version sans reCAPTCHA
+    handleSubmit(e);
   };
 
   return (
@@ -304,6 +310,13 @@ const Contact = () => {
               onSubmit={handleFormSubmit}
               className="flex flex-col gap-6 w-full max-w-[480px]"
             >
+              {/* Affichage d'une erreur si bot détecté */}
+              {botError && (
+                <div className="text-red-500 font-semibold text-center">
+                  {botError}
+                </div>
+              )}
+
               {/* Prénom & Nom */}
               <div className="flex gap-8">
                 <div className="flex-1 ">
@@ -402,14 +415,6 @@ const Contact = () => {
                 autoComplete="off"
               />
 
-              {/* reCAPTCHA (optionnel) */}
-              {/*
-              <ReCAPTCHA
-                sitekey="VOTRE_SITE_KEY_RECAPTCHA"
-                onChange={token => setRecaptchaToken(token)}
-              />
-              */}
-
               {/* Bouton d'envoi */}
               <button
                 type="submit"
@@ -453,3 +458,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
