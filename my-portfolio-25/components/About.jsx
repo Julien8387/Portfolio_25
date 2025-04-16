@@ -84,9 +84,9 @@ const About = () => {
                 {/** Item 2 */}
                 <div className="text-center lg:text-left">
                   <div className="uppercase font-bold text-primary mb-2">
-                    Né à
+                    Né en
                   </div>
-                  <div>La Seyne s/Mer, 83500 Var, France</div>
+                  <div>France</div>
                 </div>
                 {/** Item 3 - Phone La classe whitespace-nowrap empêchera le numéro de téléphone de se couper sur plusieurs lignes*/}
                 <div className="text-center lg:text-left">
