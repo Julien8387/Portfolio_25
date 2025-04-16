@@ -5,7 +5,7 @@ const statsData = [
   {
     endCountNum: 9,
     endCountText: "",
-    text: "Mois de foramtion",
+    text: "Mois de formation",
   },
   {
     endCountNum: 8,
