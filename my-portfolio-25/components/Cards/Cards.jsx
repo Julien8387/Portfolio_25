@@ -65,10 +65,10 @@ const journey = [
   },
   {
     type: "experience",
-    institution: "***titre***",
-    qualification: "Jul 2021 - Present",
+    institution: "SNCF Voyageurs",
+    qualification: "Agent Service Commercial Train",
 
-    duration: "***Date***",
+    duration: "2014-2024",
     description: "***description***",
   },
   //Compétences
